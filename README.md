@@ -36,3 +36,19 @@ Antes de começar, certifique-se de ter instalado:
    ```bash
    git clone https://github.com/seunomeusuario/segarante_test.git
    cd segarante_test
+
+2. **Instale as dependências:**
+
+   ```bash
+   bundle install
+
+3. **Configure o banco de dados:**
+
+   ```bash
+   rails db:create db:migrate db:seed
+
+4. **Inicie o servidor:**
+
+   ```bash
+   rails server
+   
