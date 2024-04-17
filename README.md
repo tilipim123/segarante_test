@@ -64,5 +64,3 @@ Para executar os testes RSpec da aplicação, use o comando:
 
 ```bash
 bundle exec rspec
-
-   
