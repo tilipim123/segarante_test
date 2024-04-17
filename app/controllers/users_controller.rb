@@ -11,17 +11,29 @@ class UsersController < ApplicationController
 
   def show
     user = @user_service.find_user(params[:id])
-    render json: user
+    if user
+      render json: user
+    else
+      render json: { error: 'User not found' }, status: :not_found
+    end
   end
 
   def create
     user = @user_service.create_user(user_params)
-    render json: user, status: :created
+    if user
+      render json: user, status: :created
+    else
+      render json: { error: 'Failed to create user' }, status: :unprocessable_entity
+    end
   end
 
   def update
     user = @user_service.update_user(params[:id], user_params)
-    render json: user
+    if user
+      render json: user
+    else
+      render json: { error: 'Failed to update user' }, status: :unprocessable_entity
+    end
   end
 
   def destroy

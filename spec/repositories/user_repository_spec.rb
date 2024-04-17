@@ -4,7 +4,11 @@ require 'rails_helper'
 
 RSpec.describe UserRepository, type: :repository do
   let(:user_params) { { username: 'john', email: 'john@example.com', password: 'secure123' } }
-  let(:user) { User.create(user_params) }
+  let(:user) { User.create!(user_params) }
+
+  before(:each) do
+    User.destroy_all
+  end
 
   describe '#find' do
     it 'finds a user by id' do
@@ -28,14 +32,15 @@ RSpec.describe UserRepository, type: :repository do
 
   describe '#destroy' do
     it 'deletes a user' do
-      new_user = User.create(user_params)
+      new_user = User.create!(user_params)
       expect { described_class.new.destroy(new_user) }.to change(User, :count).by(-1)
     end
   end
 
   describe '#find_by_email' do
     it 'finds a user by email' do
-      expect(described_class.new.find_by_email('john@example.com')).to eq(user)
+      user
+      expect(described_class.new.find_by_email('john@example.com').email).to eq('john@example.com')
     end
 
     it 'returns nil if the user does not exist' do
