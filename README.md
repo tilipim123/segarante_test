@@ -51,4 +51,11 @@ Antes de começar, certifique-se de ter instalado:
 
    ```bash
    rails server
+Isso executará o servidor em http://localhost:3000. Os endpoints da API agora podem ser acessados localmente.
+
+## Utilizando a Documentação Swagger
+
+Para visualizar a documentação da API Swagger e interagir com os endpoints da API:
+- Navegue até http://localhost:3000/api-docs no seu navegador.
+
    
