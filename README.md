@@ -1,24 +1,38 @@
-# README
+# Projeto Segarante Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Olá! Bem-vindo ao Projeto Segarante Test. Desenvolvi este projeto utilizando Ruby on Rails, seguindo uma arquitetura de microserviços e implementando padrões como Repositório e Serviços para manter o código organizado e claro. Utilizei também o Swagger para documentar a API e facilitar tanto o desenvolvimento quanto os testes.
 
-Things you may want to cover:
+## Características
 
-* Ruby version
+- **Arquitetura de Microserviços**: Separa o aplicativo em serviços pequenos e modulares, que podem ser implementados de forma independente.
+- **Padrão de Repositório**: Fornece uma separação clara entre a lógica de negócios da aplicação e as camadas de acesso a dados.
+- **Camada de Serviço**: Abstrai e encapsula a lógica de negócios da aplicação, mantendo uma separação entre o controlador e o modelo.
+- **API RESTful**: Expõe um conjunto de endpoints bem definidos para a gestão de usuários.
+- **Documentação com Swagger**: Oferece uma documentação interativa e automática dos endpoints da API usando Swagger (OpenAPI).
 
-* System dependencies
+## Pilha Tecnológica
 
-* Configuration
+- **Ruby (3.2.2)** e **Rails (7.1.0)**: Escolhi as versões mais recentes para aproveitar as últimas melhorias e recursos oferecidos por essas tecnologias.
+- **PostgreSQL**: Banco de dados principal para armazenamento de dados da aplicação.
+- **RSpec**: Framework de teste para Ruby, usado para escrever testes unitários e de integração.
+- **Swagger**: Utilizado para documentar os endpoints da API e fornecer uma interface de teste.
 
-* Database creation
+## Primeiros Passos
 
-* Database initialization
+Estas instruções ajudarão você a obter uma cópia do projeto em funcionamento na sua máquina local para fins de desenvolvimento e teste.
 
-* How to run the test suite
+### Pré-requisitos
 
-* Services (job queues, cache servers, search engines, etc.)
+Antes de começar, certifique-se de ter instalado:
+- Ruby (2.7 ou mais recente)
+- Rails (6.0 ou mais recente)
+- PostgreSQL
+- Bundler
 
-* Deployment instructions
+### Instalação
 
-* ...
+1. **Clone o repositório:**
+
+   ```bash
+   git clone https://github.com/seunomeusuario/segarante_test.git
+   cd segarante_test
