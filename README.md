@@ -58,11 +58,11 @@ Isso executará o servidor em http://localhost:3000. Os endpoints da API agora p
 Para visualizar a documentação da API Swagger e interagir com os endpoints da API:
 - Navegue até http://localhost:3000/api-docs no seu navegador.
 
-  ## Executando os Testes
-  
-  Para executar os testes RSpec da aplicação, use o comando:
-  
-  ```bash
-   bundle exec rspec
+## Executando os Testes
+
+Para executar os testes RSpec da aplicação, use o comando:
+
+```bash
+bundle exec rspec
 
    
