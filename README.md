@@ -4,7 +4,7 @@ Desenvolvi este projeto utilizando Ruby on Rails, seguindo uma arquitetura de mi
 
 ## Design e Implementação
 
-- **Padrão Repository**: Utilizei o Padrão Repository para abstrair a camada de dados, como uma extensão do MVC usual que o rails utiliza, tornando o manuseio de dados mais adaptável e escalável. A classe UserRepository gerencia todas as operações de banco de dados relacionadas aos usuários, tornando os controllers e services mais limpos e mais fáceis de manter.
+- **Padrão Repository**: Utilizei o Padrão Repository para abstrair a camada de dados, como uma extensão do MVC usual que o Rails utiliza, tornando o manuseio de dados mais adaptável e escalável. A classe UserRepository gerencia todas as operações de banco de dados relacionadas aos usuários, tornando os controllers e services mais limpos e mais fáceis de manter.
 - **Camada de Serviço**: As classes UserService e AuthService provêm separação da lógica de negócios do controller. Elas gerenciam toda a lógica relacionada à gestão e autenticação de usuários, garantindo que os controllers fiquem enxutos e focados apenas em lidar com solicitações e respostas HTTP.
 - **Documentação com Swagger**: Gera automaticamente a documentação para todos os endpoints da API, dando uma interface visual para interação durante o desenvolvimento e testes.
 
