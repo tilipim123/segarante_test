@@ -26,19 +26,22 @@ paths:
             schema:
               type: object
               properties:
-                username:
-                  type: string
-                email:
-                  type: string
-                password:
-                  type: string
-                password_confirmation:
-                  type: string
-              required:
-              - username
-              - email
-              - password
-              - password_confirmation
+                user:
+                  type: object
+                  properties:
+                    username:
+                      type: string
+                    email:
+                      type: string
+                    password:
+                      type: string
+                    password_confirmation:
+                      type: string
+                  required:
+                  - username
+                  - email
+                  - password
+                  - password_confirmation
   "/users/{id}":
     get:
       summary: Retrieves a user
@@ -76,6 +79,8 @@ paths:
               properties:
                 email:
                   type: string
+              required:
+              - email
     delete:
       summary: Deletes a user
       tags:
@@ -89,29 +94,33 @@ paths:
       responses:
         '204':
           description: user deleted
-  "/change_password":
-    post:
+  "/users/{id}/change_password":
+    patch:
       summary: Changes a user's password
       tags:
       - Users
-      parameters: []
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: password changed
+        '422':
+          description: unprocessable entity
       requestBody:
         content:
           application/json:
             schema:
               type: object
               properties:
-                id:
-                  type: integer
                 new_password:
                   type: string
                 new_password_confirmation:
                   type: string
               required:
-              - id
               - new_password
               - new_password_confirmation
   "/login":

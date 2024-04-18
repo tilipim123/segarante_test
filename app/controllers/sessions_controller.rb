@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   end
 
   def change_password
-    success = AuthService.new.change_password(params[:id], params[:new_password], params[:new_password_confirmation])
+    success = AuthService.new.change_password(params[:id], params[:user][:new_password], params[:user][:new_password_confirmation])
     if success
       render json: { message: 'Password successfully updated' }
     else
